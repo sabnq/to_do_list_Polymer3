@@ -1,0 +1,22 @@
+{
+    "name": "to-do-list",
+    "description": "To do list app in Polymer",
+    "main": "to-do-list.js",
+    "dependencies": {
+        "@polymer/lit-element": "^0.5.2",
+        "@polymer/polymer": "^3.0.0",
+        "browser-sync": "^2.24.7",
+        "concurrently": "^4.0.1",
+        "lodash": "^4.17.11"
+    },
+    "devDependencies": {
+        "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+        "@webcomponents/webcomponentsjs": "^2.0.0",
+        "wct-browser-legacy": "^1.0.0"
+    },
+    "scripts": {
+        "start": "concurrently \"npm run serve\" \"npm run watch\"",
+        "serve": "polymer serve --port 8080",
+        "watch": "browser-sync start --proxy localhost:8080 --files \"src/components/**/*.js\""
+    }
+}
